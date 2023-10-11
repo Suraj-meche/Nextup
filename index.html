@@ -127,21 +127,36 @@
             border-radius: 4px;
             background-color: #00986f;
             display: block;
+        
         }
 
       .active{
         background: green;
       }
   .active span{
-    background:w white;
+    background: white;
     margin-left: 31px;
   }
   .on{
     opacity: 1;
   }
+  .text{
+    margin-left: -72%;
+    max-width: 250px;
+    transform: translateX(-0%);
+    margin-top: -40%;
+    opacity: 0;
+    transition: opacity 10s;
+    text-align: center;
+    font-size: 20px;
+    font-weight: bold;
+  }
+  .appear{
+    opacity: 1;
+  }
     </style>
 </head>
-<body>
+<body >
     <div id="loop">
         <nav>
             <img src="meni.jpg" class="menu-img" style="margin-bottom: 30px; " title="menu">
@@ -149,10 +164,10 @@
            
             <ul>
                 <li>
-                    <a href="index.html" title="Home page">About us</a>
+                    <a href="about.html" title="Home page">About us</a>
                 </li>
                 <li>
-                    <a href="page.html" title="page">page</a>
+                    <a href="page.html" title="Blog">page</a>
                 </li>
                 <li>
                     <a href="" title="photos">gallary</a>
@@ -181,6 +196,9 @@
                 <div id="line"><span></span></div>
                 <p>05</p>
              </div>
+             <p class="text" id="pus">The face is untitled<br>
+            At a very good and in a reasonable price <br>
+        We are offering you to Develop your bussiness with the website we build</p>
         </div>
 
 
@@ -188,9 +206,11 @@
     <script>
         var btn = document.getElementById("btn");
         var light = document.getElementById("light");
+        var pus=document.getElementById("pus");
         function toggleBtn(){
             btn.classList.toggle("active");
             light.classList.toggle("on");
+            pus.classList.toggle("appear");
         }
     </script>
 </body>
