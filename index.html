@@ -23,7 +23,7 @@
 
         }
         nav logo{
-            width: 160px;
+            width: 50px;
             cursor: pointer;
         }
         nav ul{
@@ -35,12 +35,12 @@
             list-style: none;
             margin: 0 20px;
         }
-        nav ul li a :hover{
-            color: yellow;
-        }
         nav ul li a{
             text-decoration: none;
             color: white;
+        }
+        ul li a:hover{
+            color: yellow;
         }
         button{
             background: #efefef;
@@ -137,24 +137,24 @@
 <body>
     <div id="loop">
         <nav>
-            <img src="meni.jpg" class="menu-img" style="margin-bottom: 30px;" title="menu">
+            <img src="meni.jpg" class="menu-img" style="margin-bottom: 30px; " title="menu">
             <img src="logo.png" class="logo" >
            
             <ul>
                 <li>
-                    <a href="" title="visit home">About us</a>
+                    <a href="index.html" title="Home page">About us</a>
                 </li>
                 <li>
-                    <a href="" title="visit page">page</a>
+                    <a href="page.html" title="page">page</a>
                 </li>
                 <li>
-                    <a href="" title="watch gallary">gallary</a>
+                    <a href="" title="photos">gallary</a>
                 </li>
                 <li>
-                    <a href="" title="see information" >contact us</a>
+                    <a href="" title="Information">contact us</a>
                 </li>
             </ul>
-            <button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
+            <button type="button" onclick="toggleBtn()" id="btn" title="press"><span></span></button>
         </nav>
 
         <div id="lamp-container">
