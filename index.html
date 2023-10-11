@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+
+
+<head>
+    <title>
+        next up
+    </title>
+    <style>
+        #loop{
+            background: #1d2026;
+            min-height: 100vh;
+            width: 100%;
+            color: #fff;
+            position: relative;
+        }
+        nav{
+            display: flex;
+            align-items: center;
+            padding: 20px 8%;
+        }
+        nav .menu-img{
+            width: 25px;
+            margin-right: 20PX;
+            cursor: pointer;
+
+        }
+        nav logo{
+            width: 160px;
+            cursor: pointer;
+        }
+        nav ul{
+            flex: 1;
+            text-align: right;
+        }
+        nav ul li{
+            display: inline-block;
+            list-style: none;
+            margin: 0 20px;
+        }
+        nav ul li a{
+            text-decoration: none;
+            color: white;
+        }
+        button{
+            background: #efefef;
+            height: 30px;
+            width: 60px;
+            border-radius: 20px;
+            border: 0;
+            outline: 0;
+            cursor: pointer;
+            transition: background 0.5s;
+        }
+        button span{
+            display: block;
+            background: #999;
+            height: 26px;
+            width: 26px;
+            border-radius: 50%;
+            transition: background 0.5, margin-left 0.5s;
+            
+
+        }
+        #lamp-container{
+            position: absolute;
+            top: -21px;
+            left: 22%;
+            width: 150px;
+        }
+        .lamp{
+            width: 100%;
+        }
+        .light{
+            position: absolute;
+            top: 77%;
+            left: 44%;
+            transform: translateX(-50%);
+            width: 560px;
+            opacity: 0;
+            transition: opacity 0.5s;
+        }
+        #text-content{
+            max-width: 600px;
+            margin-top: 7%;
+            margin-left: 50%;
+        }
+        #text-content h1{
+            font-size: 80px;
+            font-weight: 400;
+        }
+         
+        #text-content a{
+            text-decoration: none;
+            background: #00986f;
+            padding: 14px 40px;
+            display: inline-block;
+            color: #fff;
+            font-size: 18px;
+            margin-top: 5px;
+            border-radius: 30px;
+        }
+        #control{
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            margin-top: 15px;
+        }
+        #control #line{
+            width: 250px;
+            background: white;
+            height: 4px;
+            margin: 0 20px;
+            border-radius: 2px;
+        }
+        #control #line span{
+            width: 50%;
+            height: 6px;
+            margin-top: -1px;
+            border-radius: 4px;
+            background-color: #00986f;
+            display: block;
+        }
+
+      .active{
+        background: green;
+      }
+  .active span{
+    background:w white;
+    margin-left: 31px;
+  }
+  .on{
+    opacity: 1;
+  }
+    </style>
+</head>
+<body>
+    <div id="loop">
+        <nav>
+            <img src="meni.jpg" class="menu-img" style="margin-bottom: 30px; ">
+            <img src="logo.png" class="logo" >
+           
+            <ul>
+                <li>
+                    <a href="">About us</a>
+                </li>
+                <li>
+                    <a href="">page</a>
+                </li>
+                <li>
+                    <a href="">gallary</a>
+                </li>
+                <li>
+                    <a href="">contact us</a>
+                </li>
+            </ul>
+            <button type="button" onclick="toggleBtn()" id="btn"><span></span></button>
+        </nav>
+
+        <div id="lamp-container">
+            <img src="lamp.png" class="lamp ">
+            <img src="light.png" class="light" id="light">
+        </div>
+        <div id="text-content">
+            <h1>
+                Upgrade <br>with us
+            </h1>
+            <p>Develop your business or any institute through adapting website of your own. <br>
+                We help you to build up youe business with your own idea.
+            </own></p>
+             <a href="">check our work</a>
+             <div id="control">
+                <p>04</p>
+                <div id="line"><span></span></div>
+                <p>05</p>
+             </div>
+        </div>
+
+
+    </div>
+    <script>
+        var btn = document.getElementById("btn");
+        var light = document.getElementById("light");
+        function toggleBtn(){
+            btn.classList.toggle("active");
+            light.classList.toggle("on");
+        }
+    </script>
+</body>
+
+
+
+</html>
